@@ -166,11 +166,11 @@
   //  DRAW THE CHORD DIAGRAM
   //*******************************************************************
   function drawChords (matrix, mmap) {
-         var screenWidth = $(window).width();
+  var screenWidth = $(window).width();
     console.log(screenWidth)
-    var margin = {left: 50, top: 10, right: 65, bottom: 10},
-  w = Math.min(screenWidth, 820) - margin.left - margin.right,
-  h= Math.min(screenWidth, 800)*5/6 - margin.top - margin.bottom;
+    var margin = {left: 50, top: 7, right: 65, bottom: 7},
+  w = Math.min(screenWidth, 860) - margin.left - margin.right,
+  h= Math.min(screenWidth, 830)*7/8 - margin.top - margin.bottom;
     // var w = 980, h = 800, 
     var r1 = h / 2, r0 = r1 - 100;
 
