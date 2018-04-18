@@ -13,7 +13,15 @@
   }
   #container {
     width: 100%;
+    height: 40%;
   }
+  #tooltip
+  {
+    width:100%;
+    margin: auto;
+    float: left;
+  }
+
 }
     body {
   overflow-x: hidden;
@@ -37,12 +45,10 @@
       width: 80%;
       text-align:center;
       margin: auto;
-      height: 75vh;
       max-width: 1200px;
     }
     #container2{
       border: 1px solid black;
-      height: 300px;
       width: 60%;
       text-align:center;
       margin: auto;
@@ -75,6 +81,7 @@
       #circle:hover path.fade {
         display: none;
       }
+
       .footer {
    left: 0;
    bottom: 0;
@@ -86,20 +93,6 @@
 @viewport {
   width: device-width ;
   zoom: 1.0 ;
-}
-@media (max-width: 768px) {
-
-#tooltip{
-  width: 50%;
-  align:center;
-
-}
-#chart{
-  width: 50%;
-  align:center;
-  
-}
-
 }
     </style>
   </head>
@@ -276,7 +269,7 @@
         d3.select("#tooltip")
           .style("visibility", "visible")
           .html(groupTip(rdr(d)))
-          .style("top", function () { return (d3.event.pageY - 80)+"px"})
+          .style("top", function () { return (d3.event.pageY - 50)+"px"})
           .style("left", function () { return (d3.event.pageX - 130)+"px";})
 
         chordPaths.classed("fade", function(p) {
