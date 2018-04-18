@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+       <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <style>
 
     @media all and (max-width: 500px) {
@@ -54,7 +55,7 @@
     }
     #container2{
       border: 1px solid black;
-      width: 60%;
+      width: 78%;
       text-align:center;
       margin: auto;
     }
@@ -165,7 +166,13 @@
   //  DRAW THE CHORD DIAGRAM
   //*******************************************************************
   function drawChords (matrix, mmap) {
-    var w = 980, h = 800, r1 = h / 2, r0 = r1 - 100;
+         var screenWidth = $(window).width();
+    console.log(screenWidth)
+    var margin = {left: 50, top: 10, right: 65, bottom: 10},
+  w = Math.min(screenWidth, 820) - margin.left - margin.right,
+  h= Math.min(screenWidth, 800)*5/6 - margin.top - margin.bottom;
+    // var w = 980, h = 800, 
+    var r1 = h / 2, r0 = r1 - 100;
 
         var fill = d3.scale.ordinal()
             .domain(40)
